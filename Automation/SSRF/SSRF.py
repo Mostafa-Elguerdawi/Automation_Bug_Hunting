@@ -18,7 +18,7 @@ def test_ssrf(url, test_url):
 
 
 ur = input("Enter EndPoints Path >>> ")
-url = open('ur', 'r').read().split('\n')
+url = open(ur, 'r').read().split('\n')
 threads = []
 for test_url in urls:
     t = threading.Thread(target=test_ssrf, args=(url, test_url))
