@@ -19,7 +19,7 @@ def test_ssti(url, payload):
 
 
 ur = input("Enter EndPoints Path >>> ")
-url = open('ur', 'r').read().split('\n')
+url = open(ur, 'r').read().split('\n')
 threads = []
 for payload in payloads:
     t = threading.Thread(target=test_ssti, args=(url, payload))
